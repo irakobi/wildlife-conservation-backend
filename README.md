@@ -17,7 +17,7 @@ A modern, scalable API for wildlife conservation data collection with Kobo Toolb
 1. **Set up Neon Database**: https://neon.tech/
 2. **Get Kobo API Token**: Settings → Security in Kobo Toolbox
 3. **Install Dependencies**: `pip install -r requirements.txt`
-4. **Configure Environment**: Copy `.env.example` to `.env` and update values
+4. **Configure Environment**: `.env`
 5. **Run Server**: `python run_server.py`
 6. **Test API**: `python test_backend.py`
 
