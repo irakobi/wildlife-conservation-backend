@@ -10,9 +10,11 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, Session
 from sqlalchemy.pool import QueuePool
 from geoalchemy2 import Geometry
-# from app.models.wildlife_models import *
 
 from app.config import settings
+# from app.models.submission_models import Base as SubmissionBase, FormSubmission, FormTemplate, MediaFile, User, SyncLog
+
+
 
 # Configure logging
 logger = logging.getLogger(__name__)

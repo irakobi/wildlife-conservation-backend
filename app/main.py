@@ -216,6 +216,21 @@ async def health_check():
 # Include API routes
 app.include_router(api_router, prefix="/api/v1")
 
+# Add this endpoint to your main.py after the health_check function
+@app.get("/api/v1/status", tags=["API"])  
+async def api_status():
+    """API status endpoint"""
+    return {
+        "api_name": settings.app_name,
+        "version": settings.app_version,
+        "status": "running", 
+        "environment": settings.environment,
+        "endpoints": {
+            "health": "/health",
+            "forms": "/api/v1/forms/",
+            "submissions": "/api/v1/submissions/"
+        }
+    }
 
 # Startup message
 @app.on_event("startup")
